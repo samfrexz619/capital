@@ -33,7 +33,6 @@ a.active {
 .nav__bottom a {
   display: flex;
   color: #0B0B0B;
-  /* padding: 17px 10px; */
   width: 100%;
   height: 48px;
   align-items: center;
@@ -42,5 +41,11 @@ a.active {
 .avatar {
   background: '#D7E5FD';
   color: '#B1CDFD'
+}
+
+.container {
+  width: 89%;
+  margin: 0 auto;
+  background: #1D4ED8;
 }
 

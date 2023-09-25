@@ -31,8 +31,12 @@ const NavIcons = ({ name }: Prop) => {
         ? <svg width="48" height="48" viewBox="0 0 48 48">
             <use xlinkHref="/sprite.svg#note" />
           </svg>
-        : <svg width="48" height="48" viewBox="0 0 48 48">
+        : name === 'favorite'
+        ? <svg width="48" height="48" viewBox="0 0 48 48">
             <use xlinkHref="/sprite.svg#like" />
+          </svg>
+        : <svg width="24" height="24" viewBox="0 0 24 24">
+            <use xlinkHref="/sprite.svg#drop" />
           </svg>
       }
     </span>
