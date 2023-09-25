@@ -46,6 +46,22 @@ a.active {
 .container {
   width: 89%;
   margin: 0 auto;
-  background: #1D4ED8;
+  /* background: #1D4ED8; */
 }
 
+.dropdownStyles {
+  display: flex;
+  padding: 20px 0;
+  text-transform: capitalize;
+  justify-content: space-between;
+  width: 100%;
+  /* background: #fff; */
+}
+
+.di {
+  color: red;
+}
+
+.id {
+  color: green
+}

@@ -1,4 +1,5 @@
-import { NavItems } from "./types"
+import { NavItems, DropdownContent } from "./types"
+import { uid } from 'uid'
 
 export const navItems: NavItems[] = [
   {
@@ -35,5 +36,53 @@ export const navItems: NavItems[] = [
     path: '/favorite',
     name: 'favorite',
     id: 7
+  },
+]
+
+export const dropdownContent: DropdownContent[] = [
+  {
+    subject: 'Applied',
+    badge: '1745',
+    id: uid(4)
+  },
+  {
+    subject: 'shortlisted',
+    badge: '453',
+    id: uid(4)
+  },
+  {
+    subject: 'technical interview',
+    badge: '123',
+    id: uid(4)
+  },
+  {
+    subject: 'opportunity browsing',
+    badge: '25',
+    id: uid(4)
+  },
+  {
+    subject: 'video interview I',
+    badge: '25',
+    id: uid(4)
+  },
+  {
+    subject: 'video interview II',
+    badge: '25',
+    id: uid(4)
+  },
+  {
+    subject: 'video interview III',
+    badge: '25',
+    id: uid(4)
+  },
+  {
+    subject: 'offer',
+    badge: '25',
+    id: uid(4)
+  },
+  {
+    subject: 'withdrawn',
+    badge: '25',
+    id: uid(4)
   },
 ]

@@ -1,57 +1,86 @@
-import React, { useState, useRef } from 'react';
-import { PlusOutlined } from '@ant-design/icons';
-import { Divider, Input, Select, Space, Button } from 'antd';
-import type { InputRef } from 'antd';
+import { Select, ConfigProvider } from 'antd';
+// import { useState } from 'react';
+import { DropdownContent } from '@/lib/types';
+import NavIcons from '../NavIcons';
+
+const { Option } = Select
+
+interface SelectProps {
+  listItems: DropdownContent[];
+  handleChange: (value: string)=> void;
+}
 
 
+const CustomSelect = ({ listItems, handleChange }:SelectProps ) => {
 
-let index = 0;
+  // const [index, setIndex] = useState(0);
 
+  const selectStyles: React.CSSProperties = {
+    width: 321,
+    background: '#fff',
+    borderRadius: 16,
+    padding: '20px 0',
+    color: '#000',
+  }
 
-const CustomSelect = () => {
+  const menuStyle: React.CSSProperties = {
+    position: 'relative',
+    top: '-40rem',
+    borderRadius: '14px',
+    width: '321px',
+    padding: 0,
+    color: '#333'
+  }
 
-  const [items, setItems] = useState(['jack', 'lucy']);
-  const [name, setName] = useState('');
-  const inputRef = useRef<InputRef>(null);
-
-  const onNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setName(event.target.value);
-  };
-
-  const addItem = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
-    e.preventDefault();
-    setItems([...items, name || `New item ${index++}`]);
-    setName('');
-    setTimeout(() => {
-      inputRef.current?.focus();
-    }, 0);
-  };
+  const badgeStyle: React.CSSProperties = {
+    background: '#F8F8F8',
+    padding: '3px 12px',
+    borderRadius: '16px',
+  }
 
   return ( 
-    <>
+    <ConfigProvider
+      theme={{
+        components: {
+          Select: {
+            optionSelectedColor: '#1D4ED8',
+            optionSelectedFontWeight: 500,
+            optionActiveBg: '#EDF2FF',
+            colorText: '#1D4ED8'
+          }
+        }
+      }}
+    >
       <Select
-      style={{ width: 300 }}
-      placeholder="custom dropdown render"
-      dropdownRender={(menu) => (
-        <>
-          {menu}
-          <Divider style={{ margin: '8px 0' }} />
-          <Space style={{ padding: '0 8px 4px' }}>
-            <Input
-              placeholder="Please enter item"
-              ref={inputRef}
-              value={name}
-              onChange={onNameChange}
-            />
-            <Button type="text" icon={<PlusOutlined />} onClick={addItem}>
-              Add item
-            </Button>
-          </Space>
-        </>
-      )}
-      options={items.map((item) => ({ label: item, value: item }))}
-    />
-    </>
+        defaultValue="Opportunity Browsing"
+        style={selectStyles}
+        onChange={handleChange}
+        bordered={false}
+        suffixIcon={<NavIcons name='drop' />}
+        removeIcon={true}
+        labelInValue={true}
+        dropdownStyle={menuStyle}
+        listHeight={610}
+        optionLabelProp='label'
+      >
+        {
+          listItems.map(item => (
+            <Option
+              key={item.id}
+              value={item.subject}
+              label={item.subject}
+            >
+              <div className='dropdownStyles'>
+                <div>{item.subject}</div>
+                  <span style={badgeStyle}>
+                    {item.badge}
+                  </span>
+              </div>
+            </Option>
+          ))
+        }
+      </Select>
+    </ConfigProvider>
    );
 }
  
