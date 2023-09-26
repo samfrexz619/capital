@@ -24,7 +24,7 @@ const Dashboard = () => {
       />
       <Layout className="site-layout" style={{ background: '#EDF4FF', marginLeft: '80px' }}>
         <div className="container">
-          <Header style={{ padding: 0, background: '#EDF4FF' }}>
+          <Header style={{ padding: 0, background: '#EDF4FF', height: '15vh' }}>
             <HeaderContent  />
           </Header>
           <Content style={{ margin: '0' }}>

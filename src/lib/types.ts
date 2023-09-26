@@ -9,3 +9,8 @@ export interface DropdownContent {
   badge: string;
   id: string;
 }
+
+export interface CtaItems {
+  icon: string;
+  id: string;
+}

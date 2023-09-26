@@ -1,4 +1,4 @@
-import { NavItems, DropdownContent } from "./types"
+import { NavItems, DropdownContent, CtaItems } from "./types"
 import { uid } from 'uid'
 
 export const navItems: NavItems[] = [
@@ -83,6 +83,29 @@ export const dropdownContent: DropdownContent[] = [
   {
     subject: 'withdrawn',
     badge: '25',
+    id: uid(4)
+  },
+]
+
+export const ctaItems: CtaItems[] = [
+  {
+    icon: 'tag',
+    id: uid(4)
+  },
+  {
+    icon: 'user1',
+    id: uid(4)
+  },
+  {
+    icon: 'user2',
+    id: uid(4)
+  },
+  {
+    icon: 'user3',
+    id: uid(4)
+  },
+  {
+    icon: 'mail',
     id: uid(4)
   },
 ]

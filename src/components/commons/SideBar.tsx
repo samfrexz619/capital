@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Button, Tooltip, Layout, } from 'antd';
+import { Button, Tooltip, Layout, ConfigProvider } from 'antd';
 import { SettingOutlined } from '@ant-design/icons'
 import BaseAvatar from './Avatar';
 import { navItems } from '@/lib/navItems';
@@ -64,22 +64,33 @@ const SideBar = ({ pathname, collapsed, setCollapsed }: NavProps) => {
             </div>
           ))}
         <div style={{width: '100%'}}>
-          <Button
-            type="text"
-            onClick={() => setCollapsed(!collapsed)}
-            style={{
-              marginTop: '15px',
-              height: '48px',
-              width: '100%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              columnGap: '10px',
-            }}
+          <ConfigProvider
+            theme={{
+              components:{
+                Button: {
+                  colorBgTextHover: '#E9EFFF',
+                  colorBgTextActive: '#E9EFFF'
+                }
+              }
+            }} 
           >
-            {collapsed ? <span>&#60;</span> : <span>&#62;</span>}
-            {!collapsed && 'Collapse'}
-          </Button>
+            <Button
+              type="text"
+              onClick={() => setCollapsed(!collapsed)}
+              style={{
+                marginTop: '15px',
+                height: '48px',
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                columnGap: '10px',
+              }}
+            >
+              {collapsed ? <span>&#60;</span> : <span>&#62;</span>}
+              {!collapsed && 'Collapse'}
+            </Button>
+          </ConfigProvider>
         </div>
         
         <div className="nav__bottom">

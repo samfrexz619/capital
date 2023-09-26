@@ -35,8 +35,28 @@ const NavIcons = ({ name }: Prop) => {
         ? <svg width="48" height="48" viewBox="0 0 48 48">
             <use xlinkHref="/sprite.svg#like" />
           </svg>
-        : <svg width="24" height="24" viewBox="0 0 24 24">
+        : name === 'drop' 
+        ? <svg width="24" height="24" viewBox="0 0 24 24">
             <use xlinkHref="/sprite.svg#drop" />
+          </svg>
+        : name === 'tag'
+        ? <svg width="24" height="24" viewBox="0 0 24 24">
+            <use xlinkHref="/sprite.svg#tag" />
+          </svg>
+        : name === 'user3'
+        ? <svg width="24" height="24" viewBox="0 0 24 24">
+            <use xlinkHref="/sprite.svg#user1" />
+          </svg>
+        : name === 'user2'
+        ? <svg width="24" height="24" viewBox="0 0 24 24">
+            <use xlinkHref="/sprite.svg#user2" />
+          </svg>
+        : name === 'user1'
+        ? <svg width="24" height="24" viewBox="0 0 24 24">
+            <use xlinkHref="/sprite.svg#user3" />
+          </svg>
+        : <svg width="24" height="24" viewBox="0 0 24 24">
+            <use xlinkHref="/sprite.svg#mail" />
           </svg>
       }
     </span>

@@ -38,6 +38,11 @@ a.active {
   align-items: center;
 }
 
+.nav a:hover {
+  background: #E9EFFF;
+  border-radius: 8px;
+}
+
 .avatar {
   background: '#D7E5FD';
   color: '#B1CDFD'
@@ -46,7 +51,6 @@ a.active {
 .container {
   width: 89%;
   margin: 0 auto;
-  /* background: #1D4ED8; */
 }
 
 .dropdownStyles {
@@ -56,12 +60,4 @@ a.active {
   justify-content: space-between;
   width: 100%;
   /* background: #fff; */
-}
-
-.di {
-  color: red;
-}
-
-.id {
-  color: green
 }
