@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { Button, Tooltip, Layout, ConfigProvider } from 'antd';
 import { SettingOutlined } from '@ant-design/icons'
-import BaseAvatar from './Avatar';
+import BaseAvatar from './BaseAvatar';
 import { navItems } from '@/lib/navItems';
 import BaseIcons from '../BaseIcons';
 
@@ -44,7 +44,7 @@ const SideBar = ({ pathname, collapsed, setCollapsed }: NavProps) => {
           alignItems: 'center',
           columnGap: '15px',
         }}>
-          <BaseAvatar bg='#D9D9D9' size='48' />
+          <BaseAvatar bg='#D9D9D9' size={40} />
           {!collapsed && <span>Some logo</span>}
         </div>
           {navItems.map(nav => (
@@ -108,6 +108,7 @@ const SideBar = ({ pathname, collapsed, setCollapsed }: NavProps) => {
               initials="AS" 
               bg='#D7E5FD' 
               text='#B1CDFD'
+              size={40}
             />
           </div>
         </div>

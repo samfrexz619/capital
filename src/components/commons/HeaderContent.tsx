@@ -38,26 +38,38 @@ const HeaderContent = () => {
     height: '100%',
     marginTop: '0.7rem'
   }
-
-  return ( 
-    <div style={headerStyles}>
-      <Row gutter={6}>
-        <Col span={7}>
-          <div style={titleStyle}>
-            <Title style={fontStyles} level={4}>London Internship Program</Title>
-            <Title style={{marginTop: '-0.3rem', fontSize: '12px', color: '#0b0b0b'}} level={5}>London</Title>
-          </div>
-        </Col>
-        <Col span={6}>
+/*
+<Col span={6}>
           <CustomSelect
             listItems={dropdownContent}
             handleChange={handleChange}
           />
         </Col>
-        <Col span={11}>
-          <div style={headerIcons}>
-            <Cta  />
+*/
+  return ( 
+    <div style={headerStyles}>
+      <Row gutter={10}>
+        <Col span={6}>
+          <div style={titleStyle}>
+            <Title style={fontStyles} level={4}>London Internship Program</Title>
+            <Title style={{marginTop: '-0.3rem', fontSize: '12px', color: '#0b0b0b'}} level={5}>London</Title>
           </div>
+        </Col>
+
+        <Col span={18}>
+          <Row gutter={20}>
+            <Col span={6}>
+              <CustomSelect
+                listItems={dropdownContent}
+                handleChange={handleChange}
+                />
+            </Col>
+            <Col span={18}>
+              <div style={headerIcons}>
+                <Cta  />
+              </div>    
+            </Col>
+          </Row>
         </Col>
       </Row>
     </div>

@@ -1,4 +1,4 @@
-import { NavItems, DropdownContent, CtaItems } from "./types"
+import { NavItems, DropdownContent, CtaItems, AccItems } from "./types"
 import { uid } from 'uid'
 
 export const navItems: NavItems[] = [
@@ -107,5 +107,43 @@ export const ctaItems: CtaItems[] = [
   {
     icon: 'mail',
     id: uid(4)
+  },
+]
+
+export const accItems: AccItems[] = [
+  {
+    title: 'personal information',
+    id: uid(4),
+    // info: [
+    //   {}
+    // ]
+  },
+  {
+    title: 'education',
+    id: uid(4),
+    // info: [
+    //   {}
+    // ]
+  },
+  {
+    title: 'work experience',
+    id: uid(4),
+    // info: [
+    //   {}
+    // ]
+  },
+  {
+    title: 'activity filter',
+    id: uid(4),
+    // info: [
+    //   {}
+    // ]
+  },
+  {
+    title: 'advanced filter',
+    id: uid(4),
+    // info: [
+    //   {}
+    // ]
   },
 ]

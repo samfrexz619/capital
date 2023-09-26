@@ -62,23 +62,19 @@ a.active {
   /* background: #fff; */
 }
 
-.custom_input {
+.ant-tabs-nav-list {
   display: flex;
+  /* background-color: yellow; */
+  justify-content: flex-end;
+  /* align-items: center; */
+  /* justify-content: space-between; */
   width: 100%;
-  /* height: 48px; */
-  align-items: center;
-  border-radius: 8px;
-  border: 1px solid #F3F3F3;
-  background: #fff;
-  padding: 10px 10px;
+}
+.ant-tabs-tab {
+  /* width: 90%; */
+  /* justify-content: center; */
 }
 
-.custom_input input {
-  outline: none;
-  border: none;
-  width: 100%;
-  height: 100%;
-  color: #9AA6AC;
-  font-size: 14px;
-  font-weight: 400;
+.ant-tabs-extra-content {
+  margin-right: 5rem;
 }

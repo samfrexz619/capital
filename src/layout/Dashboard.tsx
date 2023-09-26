@@ -29,7 +29,7 @@ const Dashboard = () => {
           </Header>
           <Content style={{ margin: '0' }}>
             <Outlet  />
-          </Content>
+          </Content> 
         </div>
       </Layout>
     </Layout>
