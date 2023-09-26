@@ -4,7 +4,7 @@ import { Button, Space, Dropdown, ConfigProvider} from "antd";
 import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { ctaItems } from "@/lib/navItems";
-import NavIcons from "../NavIcons";
+import BaseIcons from "../BaseIcons";
 
 
 
@@ -44,7 +44,7 @@ const Cta = () => {
             <Button
               style={btnStyle}
               key={item.id}
-              icon={<NavIcons name={item.icon}
+              icon={<BaseIcons name={item.icon}
               />
             } />
           ))

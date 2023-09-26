@@ -3,7 +3,7 @@ import { Button, Tooltip, Layout, ConfigProvider } from 'antd';
 import { SettingOutlined } from '@ant-design/icons'
 import BaseAvatar from './Avatar';
 import { navItems } from '@/lib/navItems';
-import NavIcons from '../NavIcons';
+import BaseIcons from '../BaseIcons';
 
 const { Sider } = Layout
 
@@ -57,7 +57,7 @@ const SideBar = ({ pathname, collapsed, setCollapsed }: NavProps) => {
                 destroyTooltipOnHide={true}
               >
                 <NavLink to={nav.path} className={nav.path === pathname ? 'active' : ''}>
-                  <NavIcons name={nav.name} />
+                  <BaseIcons name={nav.name} />
                   {!collapsed && <span>{nav.name}</span>}
                 </NavLink>
               </Tooltip>

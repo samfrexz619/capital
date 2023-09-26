@@ -61,3 +61,24 @@ a.active {
   width: 100%;
   /* background: #fff; */
 }
+
+.custom_input {
+  display: flex;
+  width: 100%;
+  /* height: 48px; */
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #F3F3F3;
+  background: #fff;
+  padding: 10px 10px;
+}
+
+.custom_input input {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  color: #9AA6AC;
+  font-size: 14px;
+  font-weight: 400;
+}

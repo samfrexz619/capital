@@ -15,7 +15,6 @@ const HeaderContent = () => {
 
   const headerStyles: React.CSSProperties = {
     height: '100%',
-    // background: '#ffff00',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -43,7 +42,7 @@ const HeaderContent = () => {
   return ( 
     <div style={headerStyles}>
       <Row gutter={6}>
-        <Col span={6}>
+        <Col span={7}>
           <div style={titleStyle}>
             <Title style={fontStyles} level={4}>London Internship Program</Title>
             <Title style={{marginTop: '-0.3rem', fontSize: '12px', color: '#0b0b0b'}} level={5}>London</Title>
@@ -55,7 +54,7 @@ const HeaderContent = () => {
             handleChange={handleChange}
           />
         </Col>
-        <Col span={12}>
+        <Col span={11}>
           <div style={headerIcons}>
             <Cta  />
           </div>

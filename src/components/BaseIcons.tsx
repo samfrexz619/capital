@@ -3,7 +3,7 @@ interface Prop {
   name: string;
 }
 
-const NavIcons = ({ name }: Prop) => {
+const BaseIcons = ({ name }: Prop) => {
   return ( 
     <span>
       {
@@ -55,12 +55,20 @@ const NavIcons = ({ name }: Prop) => {
         ? <svg width="24" height="24" viewBox="0 0 24 24">
             <use xlinkHref="/sprite.svg#user3" />
           </svg>
-        : <svg width="24" height="24" viewBox="0 0 24 24">
+        : name === 'mail' 
+        ? <svg width="24" height="24" viewBox="0 0 24 24">
             <use xlinkHref="/sprite.svg#mail" />
+          </svg>
+        : name === 'warning'
+        ? <svg width="20" height="20" viewBox="0 0 20 20">
+            <use xlinkHref="/sprite.svg#warning" />
+          </svg>
+        : <svg width="20" height="20" viewBox="0 0 20 20">
+            <use xlinkHref="/sprite.svg#search" />
           </svg>
       }
     </span>
    );
 }
  
-export default NavIcons;
+export default BaseIcons;

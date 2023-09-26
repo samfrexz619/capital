@@ -1,7 +1,7 @@
 import { Select, ConfigProvider } from 'antd';
 // import { useState } from 'react';
 import { DropdownContent } from '@/lib/types';
-import NavIcons from '../NavIcons';
+import BaseIcons from '../BaseIcons';
 
 const { Option } = Select
 
@@ -56,7 +56,7 @@ const CustomSelect = ({ listItems, handleChange }:SelectProps ) => {
         style={selectStyles}
         onChange={handleChange}
         bordered={false}
-        suffixIcon={<NavIcons name='drop' />}
+        suffixIcon={<BaseIcons name='drop' />}
         removeIcon={true}
         labelInValue={true}
         dropdownStyle={menuStyle}
