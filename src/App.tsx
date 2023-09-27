@@ -70,7 +70,7 @@ function App() {
   return (
     <div>
       {
-        windowSize < 900 
+        windowSize < 1024 
         ? <Mobile  /> 
         : <RouterProvider router={router}  />
       }

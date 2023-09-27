@@ -53,6 +53,11 @@ a.active {
   margin: 0 auto;
 }
 
+.md_container {
+  width: 77%;
+  margin: 0 auto;
+}
+
 .dropdownStyles {
   display: flex;
   padding: 20px 0;
@@ -64,7 +69,6 @@ a.active {
 
 .ant-tabs-nav-list {
   display: flex;
-  /* background-color: yellow; */
   justify-content: flex-end;
   width: 100%;
 }

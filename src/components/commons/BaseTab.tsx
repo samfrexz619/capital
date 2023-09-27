@@ -9,23 +9,16 @@ import TabLabel from './TabLabel';
 import { sum, disqualified } from '@/lib/navItems';
 
 
-
-// const onChange = (key: string) => {
-//   console.log(key);
-// };
-
 const onChecked = (e: CheckboxChangeEvent) => {
   console.log(`checked = ${e.target.checked}`);
 };
-
-
 
 
 const BaseTab = () => {
   
   const [activeTabKey, setActiveTabKey] = useState<string>('');
 
-  console.log(activeTabKey, disqualified)
+  console.log(activeTabKey)
   
   const items: TabsProps['items'] = [
     {

@@ -38,14 +38,7 @@ const HeaderContent = () => {
     height: '100%',
     marginTop: '0.7rem'
   }
-/*
-<Col span={6}>
-          <CustomSelect
-            listItems={dropdownContent}
-            handleChange={handleChange}
-          />
-        </Col>
-*/
+
   return ( 
     <div style={headerStyles}>
       <Row gutter={10}>
