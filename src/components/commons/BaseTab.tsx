@@ -2,7 +2,7 @@ import { Tabs, ConfigProvider, Checkbox, Empty } from 'antd';
 import { useState } from 'react';
 import type { CheckboxChangeEvent } from 'antd/es/checkbox';
 import type { TabsProps } from 'antd';
-import Testing from './testing';
+import Task from './Task';
 import BaseCard from './BaseCard';
 import { cardData } from "@/lib/data";
 import TabLabel from './TabLabel';
@@ -46,7 +46,7 @@ const BaseTab = () => {
     {
       key: '201',
       label: <TabLabel isActive={true} title='task' total={25} />,
-      children: <Testing  />,
+      children: <Task  />,
     },
     {
       key: '301',
@@ -69,12 +69,6 @@ const BaseTab = () => {
   const onTab2Change = (key: string) => {
     setActiveTabKey(key);
   };
-
-  // const total = cardData.map(item => {
-  //   const qualified = item.qualified.length
-  //   const disqualified = item.disqualified.length
-  //   return qualified + disqualified;
-  // })
 
 const tabCheck = <Checkbox onChange={onChecked}>
     <p style={{color: '#1D4ED8', fontWeight: '600', fontSize: '14px', marginLeft: '10px'}}>{`${sum} candidates`}</p>

@@ -1,4 +1,4 @@
-const Testing = () => {
+const Task = () => {
   return ( 
     <div>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus deleniti qui cum quaerat sapiente neque minima quia impedit, debitis molestias aliquam numquam natus magnam quae, quos nam voluptatem doloremque ducimus?
@@ -10,4 +10,4 @@ const Testing = () => {
    );
 }
  
-export default Testing;
+export default Task;

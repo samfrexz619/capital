@@ -52,7 +52,7 @@ const HeaderContent = () => {
         <Col span={6}>
           <div style={titleStyle}>
             <Title style={fontStyles} level={4}>London Internship Program</Title>
-            <Title style={{marginTop: '-0.3rem', fontSize: '12px', color: '#0b0b0b'}} level={5}>London</Title>
+            <Title style={{marginTop: '-0.3rem', fontSize: '12px', color: '#0b0b0b', fontWeight: '300'}} level={5}>London</Title>
           </div>
         </Col>
 
