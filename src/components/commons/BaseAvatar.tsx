@@ -10,6 +10,7 @@ interface AvatarProp {
 }
 
 const BaseAvatar = ({ initials, bg, text, size, textSize }: AvatarProp) => {
+  
   return ( 
     <div style={{textTransform: 'uppercase'}}>
       <ConfigProvider 

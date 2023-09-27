@@ -18,20 +18,24 @@ const SideBar = ({ pathname, collapsed, setCollapsed }: NavProps) => {
   const tipStyles: React.CSSProperties = {
     color: '#ffff00'
   }
+
+  const sideStyles: React.CSSProperties = {
+    background: '#fff',
+    padding: '15px',
+    overflow: 'auto',
+    minHeight: '100vh',
+    position: 'fixed',
+    left: 0,
+    top: 0,
+    bottom: 0,
+    scrollbarWidth: 'none',
+    borderRadius: '0px 4px 23px 0px rgba(0, 0, 0, 0.05)'
+  }
+  
   return ( 
     <Sider
       className='remove_default'
-      style={{
-        background: '#fff',
-        padding: '15px',
-        overflow: 'auto',
-        minHeight: '100vh',
-        position: 'fixed',
-        left: 0,
-        top: 0,
-        bottom: 0,
-        scrollbarWidth: 'none',
-      }}
+      style={sideStyles}
         trigger={null}
         collapsible
         collapsed={collapsed}

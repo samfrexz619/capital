@@ -17,12 +17,13 @@ const Dashboard = () => {
 
   return ( 
     <Layout 
-      hasSider style={{ minHeight: '100vh', borderRadius: 'box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.05)',}}
+      hasSider style={{ minHeight: '100vh',}}
     >
       <SideBar 
         pathname={pathname} 
         collapsed={collapsed} 
         setCollapsed={setCollapsed} 
+        
         
       />
       <Layout className="site-layout" style={{ background: '#EDF4FF', marginLeft: '80px' }}>

@@ -24,6 +24,15 @@ const BaseCard = ({ card }: CardProps) => {
     borderRadius: '16px',
   }
 
+  const cardStyles: React.CSSProperties = {
+    display: 'flex', 
+    width: '100%', 
+    padding: '20px 0', 
+    columnGap: '20px', 
+    alignItems: 'center', 
+    marginLeft: '1rem',
+  }
+
   return ( 
     <ConfigProvider 
       theme={{
@@ -34,8 +43,7 @@ const BaseCard = ({ card }: CardProps) => {
     >
       <div style={{width: '100%'}}>
         <Checkbox onChange={onChange}>
-        <div style={{display: 'flex', width: '100%', padding: '20px 0', columnGap: '20px', alignItems: 'center', marginLeft: '1rem'}}>
-          
+        <div style={cardStyles}>
           <div style={{padding: '5px'}}>
             <BaseAvatar
               initials={card.initial}
