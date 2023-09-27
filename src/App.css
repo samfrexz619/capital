@@ -66,13 +66,13 @@ a.active {
   display: flex;
   /* background-color: yellow; */
   justify-content: flex-end;
-  /* align-items: center; */
-  /* justify-content: space-between; */
   width: 100%;
 }
-.ant-tabs-tab {
+.ant-tabs-tab-btn::after {
   /* width: 90%; */
   /* justify-content: center; */
+  /* background-color: red; */
+  /* content: " |"; */
 }
 
 .ant-tabs-extra-content {

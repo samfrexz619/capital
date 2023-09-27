@@ -38,7 +38,7 @@ const HomePage = () => {
         </Col>
         <Col className="remove_default" span={18} style={{height: '85vh', overflowY: 'auto',}}>
           <Card>
-            <BaseTab  />
+            <BaseTab />
           </Card>
         </Col>
       </Row>

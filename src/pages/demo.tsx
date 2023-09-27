@@ -1,3 +1,4 @@
+import CustomCheckbox from "@/components/commons/CustomCheckbox";
 import { ConfigProvider, Space, Input, Button } from "antd";
 
 export const DemoPage = () => {
@@ -57,7 +58,11 @@ export const SharePage = () => {
 
 export const FavoritePage = () => {
   return (
-    <div>favorite</div>
+    <div>favorite
+      <div>
+        <CustomCheckbox  />
+      </div>
+    </div>
   )
 }
 

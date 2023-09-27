@@ -33,12 +33,12 @@ const BaseAccordion = () => {
 
 
   return ( 
-    <div>
+    <div style={{background: '#fff', borderRadius: '8px', paddingBottom: '0.4px'}}>
       <ConfigProvider 
         theme={{
           token: {
             colorBorder: '#F3F3F3',
-            // borderRadius: 0
+            borderRadius: 0
           },
           components: {
             Collapse: {
@@ -48,11 +48,14 @@ const BaseAccordion = () => {
           }
         }}
       >
+        <div style={{ padding: '18px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+          <p style={{fontWeight: '500', fontSize: '14px'}}>Filters</p>
+          <p style={{fontWeight: '300', fontSize: '12px'}}>{'0 Selected'}</p>
+        </div>
         <Collapse
           expandIconPosition='end'
           expandIcon={({ isActive }) => <DownOutlined rotate={isActive ? 180 : 0} style={{color: '#1D4ED8', borderRadius: '0px'}} />}
           accordion 
-          // items={acc}
           items={items}
         />
       </ConfigProvider>

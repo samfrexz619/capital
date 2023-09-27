@@ -1,4 +1,5 @@
 import { NavItems, DropdownContent, CtaItems, AccItems } from "./types"
+import { cardData } from "./data"
 import { uid } from 'uid'
 
 export const navItems: NavItems[] = [
@@ -147,3 +148,14 @@ export const accItems: AccItems[] = [
     // ]
   },
 ]
+
+export  const sum = cardData.map(item => {
+  const qualified = item.qualified.length
+  const disqualified = item.disqualified.length
+  return qualified + disqualified;
+})
+
+export const disqualified = cardData?.map(item => {
+  const disqualified = item.disqualified.length
+  return disqualified;
+})

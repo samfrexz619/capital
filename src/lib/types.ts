@@ -25,7 +25,8 @@ type Emp_Data = {
   city: string;
   location: string;
 }
-export interface CardData {
+
+export type Qualified = {
   name: string;
   country: string;
   edu: string;
@@ -33,4 +34,8 @@ export interface CardData {
   emp_data: Emp_Data;
   initial: string;
   id: string;
+}
+export interface CardData {
+  qualified: Qualified[];
+  disqualified: Qualified[]
 }

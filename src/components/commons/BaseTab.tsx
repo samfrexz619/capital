@@ -1,35 +1,85 @@
-import { Tabs, ConfigProvider } from 'antd';
+import { Tabs, ConfigProvider, Checkbox, Empty } from 'antd';
+import { useState } from 'react';
+import type { CheckboxChangeEvent } from 'antd/es/checkbox';
 import type { TabsProps } from 'antd';
 import Testing from './testing';
 import BaseCard from './BaseCard';
+import { cardData } from "@/lib/data";
+import TabLabel from './TabLabel';
+import { sum, disqualified } from '@/lib/navItems';
 
-const onChange = (key: string) => {
-  console.log(key);
+
+
+// const onChange = (key: string) => {
+//   console.log(key);
+// };
+
+const onChecked = (e: CheckboxChangeEvent) => {
+  console.log(`checked = ${e.target.checked}`);
 };
 
-const items: TabsProps['items'] = [
-  {
-    key: '1',
-    label: 'Qualified',
-    children: <BaseCard  />,
-  },
-  {
-    key: '2',
-    label: <div style={{display: 'flex', columnGap: '10px' }}> <p>Task</p> <p>25</p> </div>,
-    children: <Testing  />,
-  },
-  {
-    key: '3',
-    label: 'Disqualified',
-    children: 'Content of Tab Pane 3',
-  },
-];
 
-// const tabCheck = <div style={{color: '#1d4ed8'}}>
-//   <p></p>
-// </div>
+
 
 const BaseTab = () => {
+  
+  const [activeTabKey, setActiveTabKey] = useState<string>('');
+
+  console.log(activeTabKey, disqualified)
+  
+  const items: TabsProps['items'] = [
+    {
+      key: '102',
+      label: <TabLabel isActive={false} title='qualified' />,
+      children: <div style={{width: '100%'}}>
+        {
+          cardData.map(card => (
+            card.qualified.map(item => (
+              <div key={item.id}>
+                <BaseCard card={item}  />
+              </div>
+            ))
+          ))
+        }
+      </div>
+    },
+    {
+      key: '201',
+      label: <TabLabel isActive={true} title='task' total={25} />,
+      children: <Testing  />,
+    },
+    {
+      key: '301',
+      label: <TabLabel isActive={true} title='disqualified' total={disqualified[0]} />,
+      children: <div style={{width: '100%'}}>
+      {
+        cardData.map(card => (
+          card.disqualified.length > 0 ? card.disqualified.map(item => (
+            <div key={item.id}>
+              <BaseCard card={item}  />
+            </div>
+          ))
+          : <Empty  />
+        ))
+      }
+    </div>,
+    },
+  ];
+
+  const onTab2Change = (key: string) => {
+    setActiveTabKey(key);
+  };
+
+  // const total = cardData.map(item => {
+  //   const qualified = item.qualified.length
+  //   const disqualified = item.disqualified.length
+  //   return qualified + disqualified;
+  // })
+
+const tabCheck = <Checkbox onChange={onChecked}>
+    <p style={{color: '#1D4ED8', fontWeight: '600', fontSize: '14px', marginLeft: '10px'}}>{`${sum} candidates`}</p>
+  </Checkbox>
+
   return ( 
     <div>
       <ConfigProvider
@@ -38,15 +88,22 @@ const BaseTab = () => {
             colorPrimary: '#1D4ED8',
             colorText: '#0B0B0B',
             lineType: 'solid',
-            lineWidthBold: 0,
+            // lineWidthBold: 0,
+          },
+          components: {
+            Tabs: {
+              inkBarColor: '#fff'
+            }
           }
         }}
       >
         <Tabs
           defaultActiveKey="1"
           items={items}
-          onChange={onChange}
-          tabBarExtraContent={<p style={{color: '#1D4ED8', fontWeight: '600', fontSize: '14px'}}>247 candidates</p>}
+          // activeTabKey={activeTabKey2}
+          // onTabChange={onTab2Change}
+          onChange={onTab2Change}
+          tabBarExtraContent={tabCheck}
           tabBarStyle={{
             display: 'flex',
             flexDirection: 'row-reverse',
