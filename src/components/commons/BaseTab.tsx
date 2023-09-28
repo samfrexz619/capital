@@ -23,7 +23,7 @@ const BaseTab = () => {
   const items: TabsProps['items'] = [
     {
       key: '102',
-      label: <TabLabel isActive={false} title='qualified' />,
+      label: <TabLabel isActive={false} title='qualified'  separator/>,
       children: <div style={{width: '100%'}}>
         {
           cardData.map(card => (
@@ -38,7 +38,7 @@ const BaseTab = () => {
     },
     {
       key: '201',
-      label: <TabLabel isActive={true} title='task' total={25} />,
+      label: <TabLabel isActive={true} title='task' total={25}  separator/>,
       children: <Task  />,
     },
     {
@@ -87,8 +87,6 @@ const tabCheck = <Checkbox onChange={onChecked}>
         <Tabs
           defaultActiveKey="1"
           items={items}
-          // activeTabKey={activeTabKey2}
-          // onTabChange={onTab2Change}
           onChange={onTab2Change}
           tabBarExtraContent={tabCheck}
           tabBarStyle={{

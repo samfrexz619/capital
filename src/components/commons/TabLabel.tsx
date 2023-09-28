@@ -6,9 +6,9 @@ interface Props {
   title: string;
   isActive: boolean;
   total?: number;
-  // active: string;
+  separator?: boolean;
 }
-const TabLabel = ({ title, isActive, total }: Props) => {
+const TabLabel = ({ title, isActive, total, separator }: Props) => {
 
   const tabStyles: React.CSSProperties = {
     display: 'flex', 
@@ -25,6 +25,7 @@ const TabLabel = ({ title, isActive, total }: Props) => {
       {isActive && <Avatar size={'small'} style={{color: '#22215B', background: '#f7f8fd', fontSize: '10px'}}>
         {total}
       </Avatar>}
+     {separator && <p style={{color: '#F3F3F4', margin: '0 4px'}}>|</p>}
     </div>
    );
 }
