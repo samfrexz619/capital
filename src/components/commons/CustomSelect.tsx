@@ -16,7 +16,7 @@ const CustomSelect = ({ listItems, handleChange }:SelectProps ) => {
   // const [index, setIndex] = useState(0);
 
   const selectStyles: React.CSSProperties = {
-    width: 321,
+    width: '300px',
     background: '#fff',
     borderRadius: 16,
     padding: '20px 0',
@@ -24,12 +24,10 @@ const CustomSelect = ({ listItems, handleChange }:SelectProps ) => {
   }
 
   const menuStyle: React.CSSProperties = {
-    position: 'relative',
-    top: '-47rem',
     borderRadius: '14px',
-    width: '321px',
+    width: '300px',
     padding: 0,
-    color: '#333'
+    color: '#333',
   }
 
   const badgeStyle: React.CSSProperties = {
