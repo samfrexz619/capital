@@ -99,11 +99,19 @@ const SideBar = ({ pathname, collapsed, setCollapsed }: NavProps) => {
         </div>
         
         <div className="nav__bottom">
-          <NavLink to='/setting'>
-            <SettingOutlined 
-              style={{fontSize: '20px', display: 'block', width: '48px'}} />
-            {!collapsed && <span>Setting</span>}
-          </NavLink>
+          <Tooltip
+            placement="right" 
+            title={collapsed && 'Settings'} 
+            style={tipStyles}
+            color='#1D4ED8'
+            destroyTooltipOnHide={true}
+          >
+            <NavLink to='/setting'>
+              <SettingOutlined
+                style={{fontSize: '20px', display: 'block', width: '48px'}} />
+              {!collapsed && <span>Settings</span>}
+            </NavLink>
+          </Tooltip>
           <div 
             style={{
               padding: '10px 5px',
