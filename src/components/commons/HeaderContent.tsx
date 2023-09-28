@@ -50,7 +50,7 @@ const HeaderContent = () => {
         </Col>
 
         <Col span={18}>
-          <Row gutter={20}>
+          <Row gutter={28}>
             <Col span={6}>
               <CustomSelect
                 listItems={dropdownContent}

@@ -25,7 +25,7 @@ const CustomSelect = ({ listItems, handleChange }:SelectProps ) => {
 
   const menuStyle: React.CSSProperties = {
     position: 'relative',
-    top: '-46rem',
+    top: '-47rem',
     borderRadius: '14px',
     width: '321px',
     padding: 0,
