@@ -49,14 +49,10 @@ a.active {
 }
 
 .container {
-  width: 89%;
+  width: 90%;
   margin: 0 auto;
 }
 
-.md_container {
-  width: 77%;
-  margin: 0 auto;
-}
 
 .dropdownStyles {
   display: flex;
@@ -72,12 +68,7 @@ a.active {
   justify-content: flex-end;
   width: 100%;
 }
-.ant-tabs-tab-btn::after {
-  /* width: 90%; */
-  /* justify-content: center; */
-  /* background-color: red; */
-  /* content: " |"; */
-}
+
 
 .ant-tabs-extra-content {
   margin-right: 5rem;

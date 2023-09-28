@@ -17,17 +17,14 @@ const Dashboard = () => {
 
   return ( 
     <Layout 
-      hasSider style={{ minHeight: '100vh',}}
     >
       <SideBar 
         pathname={pathname} 
         collapsed={collapsed} 
         setCollapsed={setCollapsed} 
-        
-        
       />
       <Layout className="site-layout" style={{ background: '#EDF4FF', marginLeft: '80px' }}>
-        <div className={collapsed ? 'container' : 'md_container'}>
+        <div className='container'>
           <Header style={{ padding: 0, background: '#EDF4FF', height: '15vh' }}>
             <HeaderContent  />
           </Header>

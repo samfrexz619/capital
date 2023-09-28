@@ -28,8 +28,9 @@ const SideBar = ({ pathname, collapsed, setCollapsed }: NavProps) => {
     left: 0,
     top: 0,
     bottom: 0,
+    zIndex: 100,
     scrollbarWidth: 'none',
-    borderRadius: '0px 4px 23px 0px rgba(0, 0, 0, 0.05)'
+    boxShadow: '0px 4px 23px 0px rgba(0, 0, 0, 0.05)'
   }
   
   return ( 
